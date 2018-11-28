@@ -14,7 +14,7 @@
 		    </form>
 		    </div>
 		</div>
-<%-- 		<h1>Connexion ${user.role}</h1> --%>
+
 	<c:forEach items="${models}" var="voiture">
 		<div class="col-8">
 		<div class="card">

@@ -21,7 +21,7 @@
     </div>
     <ul class="nav navbar-nav">
       <li class="active"><a href="#">Voitures d'occasion</a></li>
-      <li><a href="#">Voiture Neuve</a></li>
+      <li><a href="model">Voiture Neuve</a></li>
       
     </ul>
     <ul class="nav navbar-nav navbar-right">
