@@ -31,7 +31,7 @@
 
       <li><button class="btn navbar-btn" data-toggle="modal" data-target="#connection"><span class="glyphicon glyphicon-log-in"></span> Se connecter</button></li>
       	</c:if>	
-      	<c:if test="${empty user}">
+      	<c:if test="${empty connecteduser}">
       <li><button class="btn navbar-btn" ><span class="glyphicon glyphicon-log-out"></span> Se déconnecter</button></li>
 		</c:if>
     </ul>
@@ -50,7 +50,7 @@
 			</div>
 			<div class="modal-body">
 
-				<form:form  method="post" action="login" modelAttribute="user">
+				<form:form  method="post" action="login" modelAttribute="connecteduser">
       <div class="modal-body mx-3">
       
         <div class="md-form mb-5">

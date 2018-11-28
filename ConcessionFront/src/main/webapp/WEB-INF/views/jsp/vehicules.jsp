@@ -23,7 +23,7 @@
 		    <h4 class="card-title">${voiture.nom}</h4>
 		    <p class="card-text">Année : ${voiture.année}  Moteur : ${voiture.moteur}   Couleur : ${voiture.couleur}</p>
 		    
-		    <h5>Prix : ${voiture.prixTotal}</h5>
+		    <h5>Prix : ${voiture.prixTotal} €</h5>
 		    <a href="#" class="btn btn-primary">Acheter</a>
 		  </div>
 		</div>

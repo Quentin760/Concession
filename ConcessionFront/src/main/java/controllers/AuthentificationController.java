@@ -38,7 +38,7 @@ public class AuthentificationController {
 	
 	@PostMapping("login")
 	@ResponseBody
-	public ResponseEntity<Utilisateur> loginOk(@Valid @ModelAttribute("user") Utilisateur utilisateur, HttpServletRequest request) {
+	public ResponseEntity<Utilisateur> loginOk(@Valid @ModelAttribute("connecteduser") Utilisateur utilisateur, HttpServletRequest request) {
 		List<Utilisateur> results = utilisateurRepository.findByLoginAndPassword(utilisateur.getLogin(), utilisateur.getPassword());
 		if (results.size()!=1) {
 			return new ResponseEntity<Utilisateur>( HttpStatus.NOT_FOUND);
@@ -46,7 +46,7 @@ public class AuthentificationController {
 		} else {
 			System.out.println(results);
 			
-			request.getSession().setAttribute("user", results.get(0));
+			request.getSession().setAttribute("connecteduser", results.get(0));
 			
 			return new ResponseEntity <Utilisateur>(HttpStatus.OK);
 				}
