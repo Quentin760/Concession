@@ -20,10 +20,10 @@
 		<div class="card">
 		  <img class="card-img-top" src=".../100px180/" alt="Card image cap">
 		  <div class="card-body">
-		    <h4 class="card-title">${models.nom}</h4>
+		    <h4 class="card-title"></h4>
 		    <p class="card-text"></p>
 		    
-		    <h5>Prix : ${models.prixDeBase}</h5>
+		    <h5>Prix : </h5>
 		    <a href="#" class="btn btn-primary">Choix des options</a>
 		  </div>
 		</div>
