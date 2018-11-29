@@ -9,7 +9,31 @@
 <title>Insert title here</title>
 </head>
 <body>
+<div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="images/Voiture1.jpg" alt="Voiture" width="1200" height="700">
+        <div class="carousel-caption">
+          <h3>New York</h3>
+          <p>The atmosphere in New York is lorem ipsum.</p>
+        </div>      
+      </div>
 
+      <div class="item">
+        <img src="images/Voiture2.jpg" alt="Voiture" width="1200" height="700">
+        <div class="carousel-caption">
+          <h3>Chicago</h3>
+          <p>Thank you, Chicago - A night we won't forget.</p>
+        </div>      
+      </div>
+    
+      <div class="item">
+        <img src="images/Voiture3.jpg" alt="Voiture" width="1200" height="700">
+        <div class="carousel-caption">
+          <h3>LA</h3>
+          <p>Even though the traffic was a mess, we had the best time playing at Venice Beach!</p>
+        </div>      
+      </div>
+    </div>
 <div class="header">
 		<h1>Concession</h1>
 </div>
@@ -65,7 +89,7 @@
         <div class="md-form mb-4">
           <i class="fa fa-lock prefix grey-text"></i>
           <form:label data-error="wrong" data-success="right" for="orangeForm-pass" path="password">Votre mot de passe</form:label>
-          <form:input type="password" id="orangeForm-pass" class="form-control validate" path="password"/>
+          <form:input type="password" id="orangForm-pass" class="form-control validate" path="password"/>
           <form:errors path="password"/>
         </div>
         <div class="alert alert-danger" style="display:none;">
