@@ -46,7 +46,7 @@ public class AuthentificationController {
 		} else {
 			System.out.println(results);
 			
-			request.getSession().setAttribute("user2", results.get(0));
+			request.getSession().setAttribute("connecteduser", results.get(0));
 			
 			return new ResponseEntity <Utilisateur>(HttpStatus.OK);
 				}
@@ -72,7 +72,7 @@ public class AuthentificationController {
 	@GetMapping("logout")
 	public String logout(HttpServletRequest request) {
 		request.getSession().invalidate();
-		return "redirect:/";
+		return "redirect:/vehicules";
 	}
 	
 

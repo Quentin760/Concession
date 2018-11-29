@@ -25,19 +25,19 @@
       
     </ul>
     <ul class="nav navbar-nav navbar-right">
-    	<c:if test="${empty user2}">
+    	<c:if test="${empty connecteduser}">
 
       <li><button class="btn navbar-btn" data-toggle="modal" data-target="#enregistrement"><span class="glyphicon glyphicon-user"></span> Créer son compte</button></li>
 
       <li><button class="btn navbar-btn" data-toggle="modal" data-target="#connection"><span class="glyphicon glyphicon-log-in"></span> Se connecter</button></li>
       	</c:if>	
-      	<c:if test="${not empty user2}">
-      <li><button class="btn navbar-btn" ><span class="glyphicon glyphicon-log-out"></span> Se déconnecter</button></li>
+      	<c:if test="${not empty connecteduser}">
+      <li><button class="btn navbar-btn" onclick="window.location.href='/ConcessionFront/logout'"><span class="glyphicon glyphicon-log-out"></span> Se déconnecter</button></li>
 		</c:if>
     </ul>
   </div>
 </nav>
-<h1>${user2}</h1>
+<h1>${connecteduser}</h1>
 
 <!-- Modal Pour la connection -------------------------------------------------------------------------->
 
