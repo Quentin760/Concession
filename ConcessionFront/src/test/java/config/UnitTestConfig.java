@@ -32,7 +32,7 @@ public class UnitTestConfig {
     	v.setNom("Focus");
         return v;
     }
-	@Bean("v1")
+	@Bean("v2")
     public Vehicule getVehicule2() {
     	Vehicule v = new Vehicule();
     	v.setAnnée(2006);

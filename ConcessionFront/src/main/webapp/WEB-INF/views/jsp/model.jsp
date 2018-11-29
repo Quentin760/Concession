@@ -15,15 +15,15 @@
 		    </div>
 		</div>
 
-	<c:forEach items="${models}" var="voiture">
+	<c:forEach items="${models}" var="model">
 		<div class="col-8">
 		<div class="card">
 		  <img class="card-img-top" src=".../100px180/" alt="Card image cap">
 		  <div class="card-body">
-		    <h4 class="card-title"></h4>
+		    <h4 class="card-title">${model.nom} ${model.nomMarque}</h4>
 		    <p class="card-text"></p>
 		    
-		    <h5>Prix : </h5>
+		    <h5>Prix : ${model.prixDeBase}</h5>
 		    <a href="#" class="btn btn-primary">Choix des options</a>
 		  </div>
 		</div>
