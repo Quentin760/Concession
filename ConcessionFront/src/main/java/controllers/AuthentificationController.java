@@ -44,7 +44,7 @@ public class AuthentificationController {
 			return new ResponseEntity<Utilisateur>( HttpStatus.NOT_FOUND);
 			
 		} else {
-			System.out.println(results);
+			System.out.println(results); 
 			
 			request.getSession().setAttribute("connecteduser", results.get(0));
 			
