@@ -9,36 +9,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-<div class="carousel-inner" role="listbox">
-      <div class="item active">
-        <img src="images/Voiture1.jpg" alt="Voiture" width="1200" height="700">
-        <div class="carousel-caption">
-          <h3>New York</h3>
-          <p>The atmosphere in New York is lorem ipsum.</p>
-        </div>      
-      </div>
 
-      <div class="item">
-        <img src="images/Voiture2.jpg" alt="Voiture" width="1200" height="700">
-        <div class="carousel-caption">
-          <h3>Chicago</h3>
-          <p>Thank you, Chicago - A night we won't forget.</p>
-        </div>      
-      </div>
-    
-      <div class="item">
-        <img src="images/Voiture3.jpg" alt="Voiture" width="1200" height="700">
-        <div class="carousel-caption">
-          <h3>LA</h3>
-          <p>Even though the traffic was a mess, we had the best time playing at Venice Beach!</p>
-        </div>      
-      </div>
-    </div>
-<div class="header">
-		<h1>Concession</h1>
-</div>
-
-<nav class="navbar navbar-inverse">
+<nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" href="#">Concession</a>
@@ -61,7 +33,54 @@
     </ul>
   </div>
 </nav>
-<h1>${connecteduser}</h1>
+
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+
+<div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="images/Voiture1.jpg" alt="Voiture" width="1200" height="700">
+        <div class="carousel-caption">
+          <h3>Voitures d'occasion</h3>
+          <p>Large choix de voitures d'occasion</p>
+        </div>      
+      </div>
+
+      <div class="item">
+        <img src="images/Voiture2.jpg" alt="Voiture" width=100% height="700">
+        <div class="carousel-caption">
+          <h3>Voitures neuves</h3>
+          <p>Achat de voitures neuves multi-options</p>
+        </div>      
+      </div>
+    
+      <div class="item">
+        <img src="images/Voiture3.jpg" alt="Voiture" width=100% height="700">
+        <div class="carousel-caption">
+          <h3>Venez nous rencontrer</h3>
+          <p>DMR Formation</p>
+        </div>      
+      </div>
+    </div>
+     <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+    
+
+
+
 
 <!-- Modal Pour la connection -------------------------------------------------------------------------->
 
