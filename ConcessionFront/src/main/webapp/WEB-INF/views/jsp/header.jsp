@@ -45,7 +45,7 @@
 
 <div class="carousel-inner" role="listbox">
       <div class="item active">
-        <img src="images/voitureOcas.jpg" alt="Voiture" width="1200" height="700">
+        <img src="images/voitureOcas.jpg" alt="Voiture" width="1200" height="500">
         <div class="carousel-caption">
           <h3>Voitures d'occasion</h3>
           <p>Large choix de voitures d'occasion</p>
@@ -53,7 +53,7 @@
       </div>
 
       <div class="item">
-        <img src="images/Voiture2.jpg" alt="Voiture" width="1200" height="700">
+        <img src="images/Voiture2.jpg" alt="Voiture" width="1200" height="500">
         <div class="carousel-caption">
           <h3>Voitures neuves</h3>
           <p>Achat de voitures neuves multi-options</p>
@@ -61,7 +61,7 @@
       </div>
     
       <div class="item">
-        <img src="images/Concession.jpg" alt="Voiture" width="1200" height="700">
+        <img src="images/Concession.jpg" alt="Voiture" width="1200" height="500">
         <div class="carousel-caption">
           <h3>Venez nous rencontrer</h3>
           <p>DMR Formation</p>

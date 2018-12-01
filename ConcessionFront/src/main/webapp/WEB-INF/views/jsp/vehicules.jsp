@@ -3,33 +3,28 @@
 
 
 
+
 <div class="container">
-	<div class="row">
-		
-			<div class="nav flex-column col-4 ">
+<div class="row text-center">
+			<div class="col-sm-4 ">
 				<form class="navbar-form navbar-left ">
 				    	<div class="form-group inner-addon left-addon">
 		    				<i class="glyphicon glyphicon-search"></i>
 				        	<input id="search" type="text" class="form-control" placeholder="Search...">
 				    	</div>
 				 </form>
-		</div>
-		<div class="col-8 card">
-			<c:forEach items="${vehicules}" var="voiture">
-				
-					
-						  		<img class="card-img-top" src=".../100px180/" alt="Card image cap">
-						  <div class="card-body">
-							    <h4 class="card-title">${voiture.nom}</h4>
-							    <p class="card-text">Année : ${voiture.année}  Moteur : ${voiture.moteur}   Couleur : ${voiture.couleur}</p>
-							    
-							    <h5>Prix : ${voiture.prixTotal} €</h5>
-							    <a href="#" class="btn btn-primary">Acheter</a>
-						  </div>
-				
-			</c:forEach>
-		</div>
-		
-		
-		</div>
+			</div>
+
+<c:forEach items="${vehicules}" var="voiture">
+  <div class="col-sm-4">
+    <div class="thumbnail">
+      <img src="paris.jpg" alt="Paris">
+      <p><strong>${voiture.nom}</strong></p>
+      <p>Année : ${voiture.année}  Moteur : ${voiture.moteur}   Couleur : ${voiture.couleur}</p>
+      <button class="btn btn-primary">Acheter</button>
+    </div>
+  </div>
+  </c:forEach>
+
+</div>
 </div>

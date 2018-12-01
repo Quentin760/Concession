@@ -16,7 +16,6 @@ import config.HibernateConf;
 import exception.HibernateUsageException;
 
 import personne.Client;
-import personne.RoleUtilisateur;
 import personne.Utilisateur;
 
 import repositories.UtilisateurRepository;
@@ -32,14 +31,15 @@ public class Main {
     public static void main(String[] args) {
 		
     	ApplicationContext context = new AnnotationConfigApplicationContext(HibernateConf.class);
-		UtilisateurRepository utilisateurRepository = (UtilisateurRepository) context.getBean(UtilisateurRepository.class);
-		Utilisateur u = new Utilisateur();
-		u.setLogin("0000");
-		u.setPassword("0000");
-		u.setRole(RoleUtilisateur.Client);
-	
+		VehiculeRepository vehiculeRepository = (VehiculeRepository) context.getBean(VehiculeRepository.class);
+		Vehicule v = new Vehicule();
+		v.setAnnée(2015);
+		v.setCouleur(Couleur.Blanc);
+		v.setMoteur(TypeMoteur.HYBRIDE);
+		v.setPrixTotal(25000.0);
+		v.setNom("Megane");
 		
-		utilisateurRepository.save(u);
+		vehiculeRepository.save(v);
 	
 		
     }
