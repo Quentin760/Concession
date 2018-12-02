@@ -43,9 +43,9 @@
     <li data-target="#myCarousel" data-slide-to="2"></li>
   </ol>
 
-<div class="carousel-inner" role="listbox">
+<div class="carousel-inner" role="listbox" style="height: 400">
       <div class="item active">
-        <img src="images/voitureOcas.jpg" alt="Voiture" width="1200" height="500">
+        <img src="images/voitureOcas.jpg" alt="Voiture" width="1200" height="250">
         <div class="carousel-caption">
           <h3>Voitures d'occasion</h3>
           <p>Large choix de voitures d'occasion</p>

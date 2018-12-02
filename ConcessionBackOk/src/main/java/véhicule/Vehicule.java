@@ -23,8 +23,7 @@ public class Vehicule {
 	@GeneratedValue
 	private int id;
 
-	// Attributs
-	// V�hicule******************************************************************
+	// Attributs Véhicule******************************************************************
 	@Column
 	protected Double prixTotal;
 	

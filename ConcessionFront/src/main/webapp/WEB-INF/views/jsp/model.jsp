@@ -2,32 +2,29 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 
-<div class="container">
-<div class="row">
-		<div class="col-4">
-		<div class="nav">
-		<form class="navbar-form navbar-left ">
-		    	<div class="form-group inner-addon left-addon">
-    				<i class="glyphicon glyphicon-search"></i>
-		        	<input id="search" type="text" class="form-control" placeholder="Search...">
-		    	</div>
-		    </form>
-		    </div>
-		</div>
+<div class="container-fluid">
+<div class="row text-center">
+			<div class="col-sm-4 ">
+				<form class="navbar-form navbar-left ">
+				    	<div class="form-group inner-addon left-addon">
+		    				<i class="glyphicon glyphicon-search"></i>
+				        	<input id="search" type="text" class="form-control" placeholder="Search...">
+				    	</div>
+				 </form>
+			</div>
 
-	<c:forEach items="${models}" var="model">
-		<div class="col-8">
-		<div class="card">
-		  <img class="card-img-top" src=".../100px180/" alt="Card image cap">
-		  <div class="card-body">
-		    <h4 class="card-title">${model.nom} ${model.nomMarque}</h4>
-		    <p class="card-text"></p>
-		    
-		    <h5>Prix : ${model.prixDeBase}</h5>
-		    <a href="#" class="btn btn-primary">Choix des options</a>
-		  </div>
-		</div>
-		</div>
-		</c:forEach>
+<c:forEach items="${models}" var="model">
+  <div class="col-sm-4" style="padding-top:10px">
+    <div class="thumbnail">
+      <img src="" alt="Voiture">
+      <p><strong>${model.nom}</strong></p>
+ 
+      
+      <h4 id="prixVehicule">${model.prixDeBase} €</h4>
+      <button class="btn btn-primary">Acheter</button>
+    </div>
+  </div>
+  </c:forEach>
+
 </div>
 </div>

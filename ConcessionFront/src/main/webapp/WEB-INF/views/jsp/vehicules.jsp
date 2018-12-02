@@ -4,7 +4,7 @@
 
 
 
-<div class="container">
+<div class="container-fluid">
 <div class="row text-center">
 			<div class="col-sm-4 ">
 				<form class="navbar-form navbar-left ">
@@ -16,11 +16,13 @@
 			</div>
 
 <c:forEach items="${vehicules}" var="voiture">
-  <div class="col-sm-4">
+  <div class="col-sm-4" style="padding-top:10px">
     <div class="thumbnail">
-      <img src="paris.jpg" alt="Paris">
+      <img src="" alt="Voiture">
       <p><strong>${voiture.nom}</strong></p>
-      <p>Année : ${voiture.année}  Moteur : ${voiture.moteur}   Couleur : ${voiture.couleur}</p>
+      <p>${voiture.année} | ${voiture.moteur} | ${voiture.couleur}</p>
+      
+      <h4 id="prixVehicule">${voiture.prixTotal} €</h4>
       <button class="btn btn-primary">Acheter</button>
     </div>
   </div>

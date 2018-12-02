@@ -27,6 +27,7 @@ body {
 
 .carousel-caption h3 {
     color: #fff !important;
+    font-size: 50px;
 }
 
 @media (max-width: 600px) {
@@ -35,81 +36,7 @@ body {
     }
 }
 
-/* Style pour la navBar ---------------------------------------------------------------------*/
-
-/* .navbar-inverse { */
-/*   background-color: #d6dedf; */
-/*   border-color: #bfcac6; */
-/* } */
-/* .navbar-inverse .navbar-brand { */
-/*   color: #000000; */
-/* } */
-/* .navbar-inverse .navbar-brand:hover, */
-/* .navbar-inverse .navbar-brand:focus { */
-/*   color: #36747a; */
-/* } */
-/* .navbar-inverse .navbar-text { */
-/*   color: #000000; */
-/* } */
-/* .navbar-inverse .navbar-nav > li > a { */
-/*   color: #000000; */
-/* } */
-/* .navbar-inverse .navbar-nav > li > a:hover, */
-/* .navbar-inverse .navbar-nav > li > a:focus { */
-/*   color: #36747a; */
-/* } */
-/* .navbar-inverse .navbar-nav > .active > a, */
-/* .navbar-inverse .navbar-nav > .active > a:hover, */
-/* .navbar-inverse .navbar-nav > .active > a:focus { */
-/*   color: #36747a; */
-/*   background-color: #bfcac6; */
-/* } */
-/* .navbar-inverse .navbar-nav > .open > a, */
-/* .navbar-inverse .navbar-nav > .open > a:hover, */
-/* .navbar-inverse .navbar-nav > .open > a:focus { */
-/*   color: #36747a; */
-/*   background-color: #bfcac6; */
-/* } */
-/* .navbar-inverse .navbar-toggle { */
-/*   border-color: #bfcac6; */
-/* } */
-/* .navbar-inverse .navbar-toggle:hover, */
-/* .navbar-inverse .navbar-toggle:focus { */
-/*   background-color: #bfcac6; */
-/* } */
-/* .navbar-inverse .navbar-toggle .icon-bar { */
-/*   background-color: #000000; */
-/* } */
-/* .navbar-inverse .navbar-collapse, */
-/* .navbar-inverse .navbar-form { */
-/*   border-color: #000000; */
-/* } */
-/* .navbar-inverse .navbar-link { */
-/*   color: #000000; */
-/* } */
-/* .navbar-inverse .navbar-link:hover { */
-/*   color: #36747a; */
-/* } */
-/* .navbar-btn { */
-/* 	marge: 3px; */
-/* } */
-
-/* @media (max-width: 767px) { */
-/*   .navbar-inverse .navbar-nav .open .dropdown-menu > li > a { */
-/*     color: #000000; */
-/*   } */
-/*   .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover, */
-/*   .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:focus { */
-/*     color: #36747a; */
-/*   } */
-/*   .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a, */
-/*   .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:hover, */
-/*   .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:focus { */
-/*     color: #36747a; */
-/*     background-color: #bfcac6; */
-/*   } */
-  
-/* } */
+/* Style navbar ************************************************************************/
 .navbar-inverse {
     margin-bottom: 0;
     background-color: #2d2d30;
@@ -155,3 +82,9 @@ body {
 .dropdown-menu li a:hover {
     background-color: red !important;
 }
+
+/* #prixVehicule { */
+/* 	font-size: 2em; */
+/* 	color: yellow; */
+	
+/* } */

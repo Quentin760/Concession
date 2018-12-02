@@ -1,6 +1,6 @@
 
 
-<footer class="page-footer font-small blue fixed-bottom">
+<footer class="page-footer font-small blue fixed-bottom" style="border-top: 1px solid black">
 
 <div class="container">
   <h3 class="text-center">Contact</h3>
