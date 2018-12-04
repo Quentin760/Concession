@@ -93,9 +93,10 @@
 			</div>
 			<div class="modal-body">
 
-				<form:form  method="post" action="login" modelAttribute="user">
+				<form:form  method="post" action="" modelAttribute="user">
       <div class="modal-body mx-3">
-      
+      <div class="alert alert-danger" style="display:none;">
+        </div>
         <div class="md-form mb-5">
           <i class="fa fa-user prefix grey-text"></i>
           <form:label  path="login">Votre Nom</form:label>
@@ -111,8 +112,7 @@
           <form:input type="password" id="orangForm-pass" class="form-control validate" path="password"/>
           <form:errors path="password"/>
         </div>
-        <div class="alert alert-danger" style="display:none;">
-        </div>
+        
         
 
       </div>
@@ -142,14 +142,17 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <form:form  method="post" action="login/add" modelAttribute="newUser">
+      <form:form  method="post" action="" modelAttribute="newUser">
       <div class="modal-body mx-3">
       
+      <div class="alert alert-danger" style="display:none;">
+        </div>
         <div class="md-form mb-5">
           <i class="fa fa-user prefix grey-text"></i>
           <form:label data-error="wrong" data-success="right" for="orangeForm-name" path="login">Votre Nom</form:label>
           <form:input type="text" id="orangeForm-name" class="form-control validate" path="login"/>
           <form:errors path="login"/>
+          
         
         </div>
        
@@ -170,10 +173,11 @@
         </div>
 
       </div>
-      <div class="modal-footer d-flex justify-content-center">
-        <button class="btn btn-deep-orange">Enregistrer</button>
-      </div>
+      
       </form:form>
+      <div class="modal-footer d-flex justify-content-center">
+        <button class="btn btn-deep-orange" id="signup-button">Enregistrer</button>
+      </div>
     </div>
   </div>
 </div>
