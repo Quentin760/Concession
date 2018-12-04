@@ -7,6 +7,7 @@ import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.ElementCollection;
+import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
@@ -14,6 +15,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
+
+
 
 @Entity
 
@@ -32,6 +35,9 @@ public class Vehicule {
 	
 	@Column
 	protected int année;
+	
+	@Embedded
+	private PhotoVehicule photo;
 
 	@Enumerated(EnumType.STRING)
 	@Column
@@ -60,6 +66,14 @@ public class Vehicule {
 
 	public void setId(int id) {
 		this.id = id;
+	}
+
+	public PhotoVehicule getPhoto() {
+		return photo;
+	}
+
+	public void setPhoto(PhotoVehicule photo) {
+		this.photo = photo;
 	}
 
 	public Double getPrixTotal() {

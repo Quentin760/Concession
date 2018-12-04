@@ -16,11 +16,12 @@
       <a class="navbar-brand" href="#">Concession</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><button class="btn navbar-btn" onclick="window.location.href='/ConcessionFront/vehicules'"><span class="glyphicon glyphicon-plus"></span> Voitures d'occasion</button></li>
-      <li><button class="btn navbar-btn" onclick="window.location.href='/ConcessionFront/models'"><span class="glyphicon glyphicon-plus"></span> Voitures Neuves</button></li>
+      <li class="active"><button class="btn navbar-btn" onclick="window.location.href='/ConcessionFront/vehicules'"><span class="glyphicon glyphicon-car"></span> Voitures d'occasion</button></li>
+      <li><button class="btn navbar-btn" onclick="window.location.href='/ConcessionFront/models'"><span class="glyphicon glyphicon-car"></span> Voitures Neuves</button></li>
       
     </ul>
     <ul class="nav navbar-nav navbar-right">
+    
     	<c:if test="${empty connecteduser}">
 
       <li><button class="btn navbar-btn" data-toggle="modal" data-target="#enregistrement"><span class="glyphicon glyphicon-user"></span> Créer son compte</button></li>
@@ -28,7 +29,8 @@
       <li><button class="btn navbar-btn" data-toggle="modal" data-target="#connection"><span class="glyphicon glyphicon-log-in"></span> Se connecter</button></li>
       	</c:if>	
       	<c:if test="${not empty connecteduser}">
-      <li><button class="btn navbar-btn" onclick="window.location.href='/ConcessionFront/logout'"><span class="glyphicon glyphicon-log-out"></span> Se déconnecter</button></li>
+      	<li><button class="btn navbar-btn" onclick="window.location.href='/ConcessionFront/venteVehicules'"><span class="glyphicon glyphicon-plus"></span> Vendez votre voiture</button></li>
+      	<li><button class="btn navbar-btn" onclick="window.location.href='/ConcessionFront/logout'"><span class="glyphicon glyphicon-log-out"></span> Se déconnecter</button></li>
 		</c:if>
     </ul>
   </div>

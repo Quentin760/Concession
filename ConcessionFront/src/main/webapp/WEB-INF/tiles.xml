@@ -18,5 +18,8 @@
     <definition name="models" extends="home">
         <put-attribute name="content" value="/WEB-INF/views/jsp/model.jsp" />
     </definition>
+    <definition name="venteVehicules" extends="home">
+        <put-attribute name="content" value="/WEB-INF/views/jsp/venteVehicule.jsp" />
+    </definition>
 	
 </tiles-definitions>
