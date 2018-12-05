@@ -40,7 +40,7 @@ public class Main {
 		v.setAnnée(2006);
 		v.setCouleur(Couleur.Noir);
 		v.setMoteur(TypeMoteur.DIESEL);
-		v.setPrixTotal(6000.0);
+		v.setPrixTotal(6000);
 		v.setNom("207");
 		
 		vehiculeRepository.save(v);
@@ -49,7 +49,7 @@ public class Main {
 		v2.setAnnée(2006);
 		v2.setCouleur(Couleur.Noir);
 		v2.setMoteur(TypeMoteur.DIESEL);
-		v2.setPrixTotal(6000.0);
+		v2.setPrixTotal(6000);
 		v2.setNom("207");
 		
 		vehiculeRepository.save(v2);
@@ -58,7 +58,7 @@ public class Main {
 		v3.setAnnée(2006);
 		v3.setCouleur(Couleur.Noir);
 		v3.setMoteur(TypeMoteur.DIESEL);
-		v3.setPrixTotal(6000.0);
+		v3.setPrixTotal(6000);
 		v3.setNom("207");
 		
 		vehiculeRepository.save(v3);

@@ -4,12 +4,42 @@
 
 
 
-	<h1>Hello</h1>
+	<h1>Formulaire de vente de votre voiture</h1>
+	<div class="container-fluid">
+	<form:form method="POST" action="venteVehicules" enctype="multipart/form-data" modelAttribute="vehicule">
 	
-	<form:form method="POST" action="uploadFile" enctype="multipart/form-data">
-		File to upload: <input type="file" name="file"><br /> 
-		Name: <input type="text" name="name"><br /> <br /> 
-		<input type="submit" value="Upload">
-
+                                
+          <div class="form-group">
+                 <form:label path="nom">Nom</form:label>
+                 <form:input class="form-control" type="text" path="nom"/>
+          </div>
+          <div class="form-group">
+                 <form:label path="couleur">Couleur</form:label>
+                  <form:input class="form-control" type="text" path="couleur"/>
+          </div>
+          <div class="form-group">
+                 <form:label path="année">Année</form:label>
+                 <form:input class="form-control" type="text" path="année"/>
+          </div>
+           <div class="form-group">
+                 <form:label path="prixTotal">Prix</form:label>
+                 <form:input class="form-control" type="text" path="prixTotal"/>
+          </div>
+          
+          <form:label path="moteur">Choix du moteur</form:label>
+          <form:select class="form-control" path="moteur">
+          	<c:forEach items="${TypeMoteur}" var="moteur">
+                         <option>${moteur}</option>
+            </c:forEach>
+         </form:select>
+		<div class="form-group">
+    		<label for="exampleFormControlFile1">Photo à joindre</label>
+    		<input type="file" class="form-control-file" name="file" id="exampleFormControlFile1">
+    		<input type="text" name="name"><span>Nom du Fichier (.pdf)</span>
+  		</div>
+  		
+  		 <input type="submit" value="Valider" name="submit" class="btn btn-success">
 	</form:form>
-				
+	
+	
+</div>	

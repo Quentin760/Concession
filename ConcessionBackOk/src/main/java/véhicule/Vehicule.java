@@ -28,7 +28,7 @@ public class Vehicule {
 
 	// Attributs Véhicule******************************************************************
 	@Column
-	protected Double prixTotal;
+	protected int prixTotal;
 	
 	@Column
 	protected String nom;
@@ -36,8 +36,8 @@ public class Vehicule {
 	@Column
 	protected int année;
 	
-	@Embedded
-	private PhotoVehicule photo;
+	@Column
+	protected String image;
 
 	@Enumerated(EnumType.STRING)
 	@Column
@@ -68,19 +68,23 @@ public class Vehicule {
 		this.id = id;
 	}
 
-	public PhotoVehicule getPhoto() {
-		return photo;
+	
+
+	public String getImage() {
+		return image;
 	}
 
-	public void setPhoto(PhotoVehicule photo) {
-		this.photo = photo;
+	public void setImage(String image) {
+		this.image = image;
 	}
 
-	public Double getPrixTotal() {
+	
+
+	public int getPrixTotal() {
 		return prixTotal;
 	}
 
-	public void setPrixTotal(Double prixTotal) {
+	public void setPrixTotal(int prixTotal) {
 		this.prixTotal = prixTotal;
 	}
 
