@@ -83,8 +83,25 @@ body {
     background-color: red !important;
 }
 
-/* #prixVehicule { */
-/* 	font-size: 2em; */
-/* 	color: yellow; */
-	
-/* } */
+
+/* Style card presentation ***********************************************************/
+.prix { 
+	font-size: 1.3em; 
+ 	color: #4C5B5C; 	
+ } 
+ 
+ .nom {
+ 	font-size: 1.7em;
+ 	color: #474747;
+ }
+ .thumbnail {
+	background-color : #FCFFFE;
+ 	border-style: solid;
+ 	border-color: #474747;
+ 	border-radius: 5px;
+ }
+ .recherche {
+ 	border-style: solid;
+ 	border-color: #474747;
+ 	border-radius: 5px;
+ }
