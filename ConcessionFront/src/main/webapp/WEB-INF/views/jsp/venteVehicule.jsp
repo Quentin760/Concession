@@ -10,28 +10,28 @@
 	
                                 
           <div class="form-group">
-                 <form:label path="nom">Nom</form:label>
-                 <form:input class="form-control" type="text" path="nom"/>
+                 <label name="nom">Nom</label>
+                 <input class="form-control" type="text" name="nom"/>
           </div>
           <div class="form-group">
-                 <form:label path="couleur">Couleur</form:label>
-                  <form:input class="form-control" type="text" path="couleur"/>
+                 <label name="couleur">Couleur</label>
+                  <input class="form-control" type="text" name="couleur"/>
           </div>
           <div class="form-group">
-                 <form:label path="année">Année</form:label>
-                 <form:input class="form-control" type="text" path="année"/>
+                 <label name="année">Année</label>
+                 <input class="form-control" type="number" min="1990" max="2019" name="annee"/>
           </div>
            <div class="form-group">
-                 <form:label path="prixTotal">Prix</form:label>
-                 <form:input class="form-control" type="text" path="prixTotal"/>
+                 <label name="prixTotal">Prix</label>
+                 <input class="form-control" type="number" min="0" name="prixTotal"/>
           </div>
           
-          <form:label path="moteur">Choix du moteur</form:label>
-          <form:select class="form-control" path="moteur">
+          <label name="moteur">Choix du moteur</label>
+          <select class="form-control" name="moteur">
           	<c:forEach items="${TypeMoteur}" var="moteur">
                          <option>${moteur}</option>
             </c:forEach>
-         </form:select>
+         </select>
 		<div class="form-group">
     		<label for="exampleFormControlFile1">Photo à joindre</label>
     		<input type="file" class="form-control-file" name="file" id="exampleFormControlFile1">

@@ -16,6 +16,7 @@ import config.HibernateConf;
 import exception.HibernateUsageException;
 
 import personne.Client;
+import personne.RoleUtilisateur;
 import personne.Utilisateur;
 import repositories.ModelRepository;
 import repositories.UtilisateurRepository;
@@ -34,62 +35,17 @@ public class Main {
 		
     	ApplicationContext context = new AnnotationConfigApplicationContext(HibernateConf.class);
 		VehiculeRepository vehiculeRepository = (VehiculeRepository) context.getBean(VehiculeRepository.class);
-		ModelRepository modelRepository = (ModelRepository) context.getBean(ModelRepository.class);
+		UtilisateurRepository utilisateurRepository = (UtilisateurRepository) context.getBean(UtilisateurRepository.class);
 		
-		Vehicule v = new Vehicule();
-		v.setAnnée(2006);
-		v.setCouleur(Couleur.Noir);
-		v.setMoteur(TypeMoteur.DIESEL);
-		v.setPrixTotal(6000);
-		v.setNom("207");
+		Utilisateur u = new Utilisateur();
+		u.setLogin("Quentin");
+		u.setPassword("0000");
+		u.setRole(RoleUtilisateur.Client);
 		
-		vehiculeRepository.save(v);
+		
+		utilisateurRepository.save(u);
 	
-		Vehicule v2 = new Vehicule();
-		v2.setAnnée(2006);
-		v2.setCouleur(Couleur.Noir);
-		v2.setMoteur(TypeMoteur.DIESEL);
-		v2.setPrixTotal(6000);
-		v2.setNom("207");
 		
-		vehiculeRepository.save(v2);
-		
-		Vehicule v3 = new Vehicule();
-		v3.setAnnée(2006);
-		v3.setCouleur(Couleur.Noir);
-		v3.setMoteur(TypeMoteur.DIESEL);
-		v3.setPrixTotal(6000);
-		v3.setNom("207");
-		
-		vehiculeRepository.save(v3);
-		
-		Model m = new Model();
-		m.setNomMarque(Marque.PEUGEOT);
-		m.setPrixDeBase(15000.0);
-		m.setNom("207");
-		
-		modelRepository.save(m);
-		
-		Model m1 = new Model();
-		m.setNomMarque(Marque.PEUGEOT);
-		m.setPrixDeBase(15000.0);
-		m.setNom("207");
-		
-		modelRepository.save(m1);
-		
-		Model m2 = new Model();
-		m.setNomMarque(Marque.PEUGEOT);
-		m.setPrixDeBase(15000.0);
-		m.setNom("207");
-		
-		modelRepository.save(m2);
-		
-		Model m3 = new Model();
-		m.setNomMarque(Marque.PEUGEOT);
-		m.setPrixDeBase(15000.0);
-		m.setNom("207");
-		
-		modelRepository.save(m3);
 		
 		
 		

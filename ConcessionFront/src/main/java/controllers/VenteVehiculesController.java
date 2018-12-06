@@ -45,10 +45,12 @@ private static final Logger logger = LoggerFactory.getLogger(VenteVehiculesContr
 	 * Upload single file using Spring Controller
 	 */
 	@PostMapping("/venteVehicules")
-	public @ResponseBody
-	String uploadFileHandler(@RequestParam("name") String name, @RequestParam("prixTotal") int prixTotal, @RequestParam("nom") String nom,
-//			@RequestParam("année") int année, 
-			@RequestParam("couleur") Couleur couleur, @RequestParam("moteur") TypeMoteur moteur,
+	public String uploadFileHandler(@RequestParam("name") String name, 
+			@RequestParam("prixTotal") int prixTotal, 
+			@RequestParam("nom") String nom,
+			@RequestParam("annee") int année, 
+			@RequestParam("couleur") Couleur couleur,
+			@RequestParam("moteur") TypeMoteur moteur,
 			@RequestParam("file") MultipartFile file) {
 
 		if (!file.isEmpty()) {
@@ -72,12 +74,13 @@ private static final Logger logger = LoggerFactory.getLogger(VenteVehiculesContr
 				logger.info("Server File Location="
 						+ serverFile.getAbsolutePath());
 				Vehicule v = new Vehicule();
-//				v.setAnnée(année);
+				
 				v.setCouleur(couleur);
 				v.setImage("vehicules/"+name);
 				v.setMoteur(moteur);
 				v.setNom(nom);
 				v.setPrixTotal(prixTotal);
+				v.setAnnée(année);
 				
 				vehiculeRepository.save(v);
 				
