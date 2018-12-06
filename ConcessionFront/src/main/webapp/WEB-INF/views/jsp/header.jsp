@@ -29,8 +29,13 @@
       <li><button class="btn navbar-btn" data-toggle="modal" data-target="#connection"><span class="glyphicon glyphicon-log-in"></span> Se connecter</button></li>
       	</c:if>	
       	<c:if test="${not empty connecteduser}">
-      	<li><button class="btn navbar-btn" onclick="window.location.href='/ConcessionFront/venteVehicules'"><span class="glyphicon glyphicon-plus"></span> Vendez votre voiture</button></li>
-      	<li><button class="btn navbar-btn" onclick="window.location.href='/ConcessionFront/logout'"><span class="glyphicon glyphicon-log-out"></span> Se déconnecter</button></li>
+      		<c:if test="${connecteduser.role == 'Client'}">
+		      	<li><button class="btn navbar-btn" onclick="window.location.href='/ConcessionFront/venteVehicules'"><span class="glyphicon glyphicon-plus"></span> Vendez votre voiture</button></li>
+		      	<li><button class="btn navbar-btn" onclick="window.location.href='/ConcessionFront/logout'"><span class="glyphicon glyphicon-log-out"></span> Se déconnecter</button></li>
+			</c:if>
+			<c:if test="${connecteduse.role == 'Concessionnaire' }">
+				<li><button class="btn navbar-btn" onclick="window.location.href='/ConcessionFront/venteVehicules'"><span class="glyphicon glyphicon-plus"></span> Liste des Voitures d'occasion en attente</button></li>
+			</c:if>
 		</c:if>
     </ul>
   </div>

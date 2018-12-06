@@ -83,3 +83,13 @@ $("#orangeForm-name").keyup(function(event) {
 });
 
 });
+
+/* Function pour la recherche ****************************************************************************/
+
+function rechercheInput(ri) {
+	var pattern = $(ri).val().toLowerCase();
+	$(".element").show().filter(function() {
+		console.log("test");
+		$(this).toggle($(this).data("recherche").toLowerCase().indexOf(pattern) > -1);
+	});
+}

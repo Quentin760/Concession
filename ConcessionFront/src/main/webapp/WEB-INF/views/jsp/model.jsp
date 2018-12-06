@@ -5,16 +5,16 @@
 <div class="container-fluid">
 <div class="row text-center">
 			<div class="col-sm-4 ">
-				<form class="navbar-form navbar-left ">
-				    	<div class="form-group inner-addon left-addon">
+					<form class="navbar-form navbar-left ">
+				    	<div class="form-group inner-addon left-addon" >
 		    				<i class="glyphicon glyphicon-search"></i>
-				        	<input id="search" type="text" class="form-control" placeholder="Search...">
+				        	<input id="search" type="text" class="form-control" placeholder="Search..." onkeyup="rechercheInput(this)">
 				    	</div>
-				 </form>
-			</div>
+				 	</form>
+				</div>
 
 <c:forEach items="${models}" var="model">
-  <div class="col-sm-4" style="padding-top:10px">
+  <div class="element col-sm-4" id="${model.id}" data-recherche="${model.nom} " data-id="${model.id}"style="padding-top:10px">
     <div class="thumbnail">
       <img src="" alt="Voiture">
       <p><strong>${model.nom}</strong></p>

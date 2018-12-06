@@ -38,9 +38,9 @@ public class Main {
 		UtilisateurRepository utilisateurRepository = (UtilisateurRepository) context.getBean(UtilisateurRepository.class);
 		
 		Utilisateur u = new Utilisateur();
-		u.setLogin("Quentin");
-		u.setPassword("0000");
-		u.setRole(RoleUtilisateur.Client);
+		u.setLogin("Conc");
+		u.setPassword("1111");
+		u.setRole(RoleUtilisateur.Concessionnaire);
 		
 		
 		utilisateurRepository.save(u);
