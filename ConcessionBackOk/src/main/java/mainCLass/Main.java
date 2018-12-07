@@ -34,17 +34,10 @@ public class Main {
     public static void main(String[] args) {
 		
     	ApplicationContext context = new AnnotationConfigApplicationContext(HibernateConf.class);
-		VehiculeRepository vehiculeRepository = (VehiculeRepository) context.getBean(VehiculeRepository.class);
+//		VehiculeRepository vehiculeRepository = (VehiculeRepository) context.getBean(VehiculeRepository.class);
 		UtilisateurRepository utilisateurRepository = (UtilisateurRepository) context.getBean(UtilisateurRepository.class);
 		
-		Utilisateur u = new Utilisateur();
-		u.setLogin("Conc");
-		u.setPassword("1111");
-		u.setRole(RoleUtilisateur.Concessionnaire);
 		
-		
-		utilisateurRepository.save(u);
-	
 		
 		
 		

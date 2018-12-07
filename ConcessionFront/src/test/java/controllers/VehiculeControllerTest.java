@@ -35,6 +35,7 @@ public class VehiculeControllerTest {
 	
 	@Test
 	void testGetVehicules() throws Exception {
+	
 		mockMvc.perform(get("/vehicules"))
 			.andExpect(status().isOk())
 			.andExpect(view().name("vehicules"));

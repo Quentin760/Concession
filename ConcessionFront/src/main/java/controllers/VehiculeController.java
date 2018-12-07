@@ -28,7 +28,7 @@ public class VehiculeController {
 	public String getVehiculeGetAll (Model model) {
 		model.addAttribute("user", new Utilisateur());
 		model.addAttribute("newUser", new Utilisateur());
-		model.addAttribute("vehicules", vehiculeRepository.findAll());
+		model.addAttribute("vehicules", vehiculeRepository.findByValider(true));
 		return "vehicules";
 	}
 	
@@ -37,7 +37,7 @@ public class VehiculeController {
         @PathVariable("vehicules.image") String fileName,
         HttpServletResponse response) {
 		
-		 System.out.println("Hello");
+		
         try {
           // get your file as InputStream
           InputStream is = new DataInputStream(new FileInputStream(new File("/Users/dmr/Desktop/Cours JAVA JEE/Apache/apache-tomcat-9.0.12/tmpFiles/"+fileName)));

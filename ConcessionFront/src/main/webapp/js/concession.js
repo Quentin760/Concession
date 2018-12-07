@@ -89,7 +89,45 @@ $("#orangeForm-name").keyup(function(event) {
 function rechercheInput(ri) {
 	var pattern = $(ri).val().toLowerCase();
 	$(".element").show().filter(function() {
-		console.log("test");
 		$(this).toggle($(this).data("recherche").toLowerCase().indexOf(pattern) > -1);
 	});
+}
+
+/* listener Sur boutton valider**********************************************************************/
+
+function clickBoutonValider(bv) {
+	var id = $(bv).data("id");
+	$.ajax({
+		
+		"url": "vehiculesAValider/valider",
+		"method": "GET",
+		"data" : {
+			"id": id,
+		},
+		"error" : function(xhr, status, error) {
+		},
+		"success": function(data, status, xhr) {
+			$(".element[data-id="+id+"]").remove();
+		}
+	});
+}
+
+/* listener Sur boutton supprimer**********************************************************************/
+function clickBoutonSupprimer(bs) {
+	
+
+	var id = $(bs).data("id");
+	$.ajax({
+		"url": "vehiculesAValider/supprimer", 
+		"data": {
+				"id": id,
+			},
+		"method": "GET",
+		"error": function(xhr, status, error) {			
+			},
+		"success": function(data, status, xhr) {
+
+				$(".element[data-id="+id+"]").remove();
+			}
+		});
 }

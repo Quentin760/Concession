@@ -38,6 +38,9 @@ public class Vehicule {
 	
 	@Column
 	protected String image;
+	
+	@Column
+	protected boolean valider;
 
 	@Enumerated(EnumType.STRING)
 	@Column
@@ -49,7 +52,7 @@ public class Vehicule {
 	protected List<Options> options = new ArrayList<Options>();
 
 	@Enumerated(EnumType.STRING)
-	@Column
+	@Column 
 	protected Couleur couleur;
 
 	// Constructeur par
@@ -69,6 +72,14 @@ public class Vehicule {
 	}
 
 	
+
+	public boolean isValider() {
+		return valider;
+	}
+
+	public void setValider(boolean valider) {
+		this.valider = valider;
+	}
 
 	public String getImage() {
 		return image;

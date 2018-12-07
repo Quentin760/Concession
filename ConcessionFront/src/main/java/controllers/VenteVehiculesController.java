@@ -32,7 +32,7 @@ private static final Logger logger = LoggerFactory.getLogger(VenteVehiculesContr
 	VehiculeRepository vehiculeRepository;
 
 	@GetMapping("/venteVehicules")
-	public String addAuthorGet(Model model) {
+	public String addVehiculeGet(Model model) {
 		model.addAttribute("vehicule", new Vehicule());
 		model.addAttribute("user", new Utilisateur());
 		model.addAttribute("newUser", new Utilisateur());
@@ -54,6 +54,7 @@ private static final Logger logger = LoggerFactory.getLogger(VenteVehiculesContr
 			@RequestParam("file") MultipartFile file) {
 
 		if (!file.isEmpty()) {
+			 System.out.println("test vente");
 			try {
 				byte[] bytes = file.getBytes();
 
