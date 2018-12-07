@@ -5,11 +5,11 @@
 
 
 
-<div class="container-fluid">
+<div class="container">
 	<div class="row text-center">
 
 
-		<div class="recherche col-sm-4 " style="padding-top: 10px">
+		<div class="recherche col-sm-4 " style="marging-top: 10px">
 			<h3>Voitures d'occasion, un large choix de voiture</h3>
 			<p>Recherche par nom de voiture, couleur, moteur, année</p>
 			<form role="form" class="navbar-form navbar-left ">
@@ -37,11 +37,15 @@
 					<p class="nom">
 						<strong>${vehicules.nom}</strong>
 					</p>
-					<p>${vehicules.année}| ${vehicules.moteur} |
-						${vehicules.couleur}</p>
-
-					<h4 class="prix">${vehicules.prixTotal}€</h4>
+					<p>${vehicules.année}| ${vehicules.moteur} | ${vehicules.couleur}</p>
+			
+					<h4 class="prix">${vehicules.prixTotal} €</h4>
+				<c:if test="${empty connecteduser}">
+					<p>Connectez-vous pour pouvoir acheter ce véhicule</p>
+				</c:if>
+				<c:if test="${connecteduser.role == 'Client'}">
 					<button class="btn btn-primary">Acheter</button>
+				</c:if>
 				</div>
 			</div>
 		</c:forEach>
