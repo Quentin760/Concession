@@ -30,9 +30,12 @@
       <c:if test="${empty connecteduser}">
 					<p>Connectez-vous pour pouvoir acheter ce véhicule</p>
 		</c:if>
-      <c:if test="${connecteduser.role == 'Client'}">
-					<button class="btn btn-primary">Acheter</button>
-				</c:if>
+     	<c:if test="${connecteduser.role == 'Client'}">
+			<button class="btn btn-primary">Acheter</button>
+		</c:if>
+		<c:if test="${connecteduser.role == 'Concessionnaire'}">
+			<button class="btn btn-danger" data-id="${vehicules.id}" onclick="clickBoutonSupprimerModel(this)">Refuser mise en vente</button>
+		</c:if>
     </div>
   </div>
   </c:forEach>

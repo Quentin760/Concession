@@ -24,5 +24,8 @@
     <definition name="vehiculesAValider" extends="home">
         <put-attribute name="content" value="/WEB-INF/views/jsp/vehiculesAValider.jsp" />
     </definition>
+    <definition name="nouvelleVoiture" extends="home">
+        <put-attribute name="content" value="/WEB-INF/views/jsp/nouvelleVoiture.jsp" />
+    </definition>
 	
 </tiles-definitions>

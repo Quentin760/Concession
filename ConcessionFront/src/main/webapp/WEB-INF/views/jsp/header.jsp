@@ -35,6 +35,7 @@
 			</c:if>
 			<c:if test="${connecteduser.role == 'Concessionnaire' }">
 				<li><button class="btn navbar-btn" onclick="window.location.href='/ConcessionFront/vehiculesAValider'"><span class="glyphicon glyphicon-plus"></span> Liste des Voitures d'occasion en attente</button></li>
+				<li><button class="btn navbar-btn" onclick="window.location.href='/ConcessionFront/nouvelleVoiture'"><span class="glyphicon glyphicon-plus"></span> Ajouter nouvelle voiture neuve</button></li>
 				<li><button class="btn navbar-btn" onclick="window.location.href='/ConcessionFront/logout'"><span class="glyphicon glyphicon-log-out"></span> Se déconnecter</button></li>
 			</c:if>
 		</c:if>

@@ -131,3 +131,22 @@ function clickBoutonSupprimer(bs) {
 			}
 		});
 }
+
+function clickBoutonSupprimerModel(bs) {
+	
+
+	var id = $(bs).data("id");
+	$.ajax({
+		"url": "nouvelleVoiture/supprimer", 
+		"data": {
+				"id": id,
+			},
+		"method": "GET",
+		"error": function(xhr, status, error) {			
+			},
+		"success": function(data, status, xhr) {
+
+				$(".element[data-id="+id+"]").remove();
+			}
+		});
+}

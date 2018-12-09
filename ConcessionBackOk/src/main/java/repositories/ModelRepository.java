@@ -3,8 +3,8 @@ package repositories;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 
-import véhicule.Model;
+import véhicule.VoitureNeuve;
 
-public interface ModelRepository extends JpaRepository<Model, Integer>{
+public interface ModelRepository extends JpaRepository<VoitureNeuve, Integer>{
 
 }

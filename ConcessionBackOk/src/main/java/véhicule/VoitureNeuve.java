@@ -13,7 +13,7 @@ import javax.persistence.Id;
 
 @Entity
 
-public class Model {
+public class VoitureNeuve {
 	@Id
 	@GeneratedValue
 	protected int id;
