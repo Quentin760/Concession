@@ -4,8 +4,8 @@
 
 
 
-	<h1>Formulaire de vente de votre voiture</h1>
-	<div class="container-fluid">
+	<h1 style="text-align: center">Formulaire de vente de votre voiture</h1>
+	<div class="container" style="width: 50%">
 	<form:form method="POST" action="venteVehicules" enctype="multipart/form-data" modelAttribute="vehicule">
 	
                                 

@@ -14,10 +14,10 @@
 			<p>Recherche par nom de voiture, couleur, moteur, année</p>
 			<form role="form" class="navbar-form navbar-left ">
 				<div class="form-group has-feedback">
-					<label class="control-label">Recherche :</label> <input type="text"
-						class="form-control" placeholder="Recherche..."
-						onkeyup="rechercheInput(this)" /> <i
-						class="form-control-feedback glyphicon glyphicon-search"></i>
+					<label class="control-label">Recherche :</label>
+					<input type="text" class="form-control" placeholder="Recherche..." onkeyup="rechercheInput(this)" style="display: inline-block;
+					max-width: 100%"/> 
+					<i class="form-control-feedback glyphicon glyphicon-search"></i>
 				</div>
 			</form>
 

@@ -13,6 +13,7 @@ import personne.Utilisateur;
 import repositories.VoitureNeuveRepository;
 import véhicule.Couleur;
 import véhicule.Marque;
+import véhicule.Options;
 import véhicule.TypeMoteur;
 
 
@@ -30,6 +31,7 @@ public class ModelController {
 		model.addAttribute("Couleur", new HashSet<Couleur>(Arrays.asList(Couleur.values())));
 		model.addAttribute("TypeMoteur", new HashSet<TypeMoteur>(Arrays.asList(TypeMoteur.values())));
 		model.addAttribute("Marque", new HashSet<Marque>(Arrays.asList(Marque.values())));
+		model.addAttribute("Options", new HashSet<Options>(Arrays.asList(Options.values())));
 		return "models";
 	}
 	

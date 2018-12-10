@@ -5,8 +5,8 @@
 
 
 
-<h1>Formulaire de mise en ligne d'une nouvelle voiture</h1>
-<div class="container-fluid">
+<h1 style="text-align: center">Formulaire de mise en ligne d'une nouvelle voiture</h1>
+<div class="container" style="width: 50%">
 	<form:form method="POST" action="nouvelleVoiture"
 		modelAttribute="model">
 

@@ -24,6 +24,7 @@ import repositories.UtilisateurRepository;
 import repositories.VehiculeRepository;
 import véhicule.Couleur;
 import véhicule.Marque;
+import véhicule.Options;
 import véhicule.VoitureNeuve;
 import véhicule.TypeMoteur;
 import véhicule.Vehicule;
@@ -41,11 +42,12 @@ public class Main {
 		
 		
 		VoitureNeuve v = new VoitureNeuve();
-		v.setNom("Scenic");
+		v.setNom("Megane");
 		v.setCouleursDispo(new HashSet<Couleur>(Arrays.asList(Couleur.values())));
 		v.setNomMarque(Marque.Renault);
 		v.setMoteursDispo(new HashSet<TypeMoteur>(Arrays.asList(TypeMoteur.values())));
-		v.setPrixDeBase(15000.0);
+		v.setPrixDeBase(13000.0);
+		v.setOptionsDispo(new HashSet<Options>(Arrays.asList(Options.values())));
 		
 		
 		voitureNeuveRepository.save(v);

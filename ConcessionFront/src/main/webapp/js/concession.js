@@ -5,6 +5,8 @@
 
 
 $(document).ready(function() {
+	
+$('.selectpicker').selectpicker( {placeholder: "Here is the placeholder"});
 
 /* Login AJAX **************************************************************************/
 $("#login-button").click(function() {

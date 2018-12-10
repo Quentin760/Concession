@@ -21,8 +21,8 @@
 <c:forEach items="${models}" var="model">
   <div class="element col-sm-4" id="${model.id}" data-recherche="${model.nom} " data-id="${model.id}"style="padding-top:10px">
     <div class="thumbnail">
-      <img src="" alt="Voiture">
-      <p><strong>${model.nom}</strong></p>
+      
+      <h1>${model.nom}</h1>
  
       
       
@@ -40,7 +40,13 @@
 					<option>${couleur}</option>
 				</c:forEach>
 			</select>
-			
+			<label name="options">Options</label> 
+      		<select class="form-control selectpicker" multiple data-live-search="true" data-style="btn-default" data-title="Choisissez vos options" data-width="100%" name="options">
+
+				<c:forEach items="${Options}" var="options">
+					<option>${options}</option>
+				</c:forEach>
+			</select>
 			
       <h4 id="prixVehicule">${model.prixDeBase} €</h4>
       
