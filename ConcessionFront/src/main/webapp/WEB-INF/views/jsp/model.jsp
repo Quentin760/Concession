@@ -3,7 +3,7 @@
 
 
 <div class="container">
-<div class="row text-center">
+<div class="row text-center row-eq-height" >
 			<div class="recherche col-sm-4 " style="marging-top: 10px">
 			<h3>Voitures neuves, un large choix de voiture</h3>
 			<p>Recherche par nom de voiture, marque</p>
@@ -25,16 +25,33 @@
       <p><strong>${model.nom}</strong></p>
  
       
+      
+      <p><strong>${model.nomMarque}</strong></p>
+      
+       <label name="moteur">Type de moteur</label> 
+      		<select class="form-control" name="couleur">
+				<c:forEach items="${TypeMoteur}" var="moteur">
+					<option>${moteur}</option>
+				</c:forEach>
+			</select>
+      <label name="couleur">Couleur</label> 
+      		<select class="form-control" name="couleur">
+				<c:forEach items="${Couleur}" var="couleur">
+					<option>${couleur}</option>
+				</c:forEach>
+			</select>
+			
+			
       <h4 id="prixVehicule">${model.prixDeBase} €</h4>
       
       <c:if test="${empty connecteduser}">
 					<p>Connectez-vous pour pouvoir acheter ce véhicule</p>
 		</c:if>
      	<c:if test="${connecteduser.role == 'Client'}">
-			<button class="btn btn-primary">Acheter</button>
+			<button class="btn btn-primary" data-toggle="modal" data-target="#Acheter">Acheter</button>
 		</c:if>
 		<c:if test="${connecteduser.role == 'Concessionnaire'}">
-			<button class="btn btn-danger" data-id="${vehicules.id}" onclick="clickBoutonSupprimerModel(this)">Refuser mise en vente</button>
+			<button class="btn btn-danger" data-id="${model.id}" onclick="clickBoutonSupprimerModel(this)">Supprimer</button>
 		</c:if>
     </div>
   </div>

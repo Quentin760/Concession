@@ -108,6 +108,8 @@ public class VoitureNeuve {
 	public void setOptionsDispo(Set<Options> optionsDispo) {
 		this.optionsDispo = optionsDispo;
 	}
+
+
 	
 	
 	

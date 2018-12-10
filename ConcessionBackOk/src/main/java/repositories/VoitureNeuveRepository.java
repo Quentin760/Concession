@@ -5,6 +5,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import véhicule.VoitureNeuve;
 
-public interface ModelRepository extends JpaRepository<VoitureNeuve, Integer>{
+public interface VoitureNeuveRepository extends JpaRepository<VoitureNeuve, Integer>{
 
 }

@@ -37,7 +37,7 @@
 					<p class="nom">
 						<strong>${vehicules.nom}</strong>
 					</p>
-					<p>${vehicules.année}| ${vehicules.moteur} | ${vehicules.couleur}</p>
+					<p>${vehicules.année} | ${vehicules.moteur} | ${vehicules.couleur}</p>
 			
 					<h4 class="prix">${vehicules.prixTotal} €</h4>
 				

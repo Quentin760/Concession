@@ -54,7 +54,7 @@ private static final Logger logger = LoggerFactory.getLogger(VenteVehiculesContr
 			@RequestParam("file") MultipartFile file) {
 
 		if (!file.isEmpty()) {
-			 System.out.println("test vente");
+			
 			try {
 				byte[] bytes = file.getBytes();
 

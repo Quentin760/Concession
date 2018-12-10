@@ -25,7 +25,7 @@ $("#login-button").click(function() {
 					
 						$("#connection .alert").removeClass("alert-danger").addClass("alert-success").html("<strong>Connexion reussi</strong>").show();
 						window.setTimeout(function() {
-							location.href = "/ConcessionFront/vehicules";
+							location.href = location.href;
 						}, 1000);
 						}
 			});
@@ -134,15 +134,15 @@ function clickBoutonSupprimer(bs) {
 
 function clickBoutonSupprimerModel(bs) {
 	
-
+	
 	var id = $(bs).data("id");
 	$.ajax({
-		"url": "nouvelleVoiture/supprimer", 
+		"url": "models/supprimer", 
 		"data": {
 				"id": id,
 			},
 		"method": "GET",
-		"error": function(xhr, status, error) {			
+		"error": function(xhr, status, error) {	
 			},
 		"success": function(data, status, xhr) {
 

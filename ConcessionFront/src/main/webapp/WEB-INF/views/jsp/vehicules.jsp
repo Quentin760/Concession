@@ -6,10 +6,10 @@
 
 
 <div class="container">
-	<div class="row text-center">
+	<div class="row text-center row-eq-height" style="heigth: 300px">
 
 
-		<div class="recherche col-sm-4 " style="marging-top: 10px">
+		<div class="recherche col-sm-4 " style="padding: 10px">
 			<h3>Voitures d'occasion, un large choix de voiture</h3>
 			<p>Recherche par nom de voiture, couleur, moteur, année</p>
 			<form role="form" class="navbar-form navbar-left ">
@@ -44,13 +44,12 @@
 					<p>Connectez-vous pour pouvoir acheter ce véhicule</p>
 				</c:if>
 				<c:if test="${connecteduser.role == 'Client'}">
-					<button class="btn btn-primary">Acheter</button>
+					<button class="btn btn-primary" data-toggle="modal" data-target="#Acheter">Acheter</button>
 				</c:if>
 				</div>
 			</div>
 		</c:forEach>
-		
-		
-		
+
 	</div>
 </div>
+

@@ -54,7 +54,7 @@
 
 <div class="carousel-inner" role="listbox" style="height: 400">
       <div class="item active">
-        <img src="images/voitureOcas.jpg" alt="Voiture" width="1200" height="250">
+        <img src="images/voitureOcas.jpg" class ="img-responsive" alt="Voiture" width="1200" height="250">
         <div class="carousel-caption">
           <h3>Voitures d'occasion</h3>
           <p>Large choix de voitures d'occasion</p>
@@ -62,7 +62,7 @@
       </div>
 
       <div class="item">
-        <img src="images/Voiture2.jpg" alt="Voiture" width="1200" height="500">
+        <img src="images/Voiture2.jpg" class ="img-responsive" alt="Voiture" width="1200" height="500">
         <div class="carousel-caption">
           <h3>Voitures neuves</h3>
           <p>Achat de voitures neuves multi-options</p>
@@ -70,7 +70,7 @@
       </div>
     
       <div class="item">
-        <img src="images/Concession.jpg" alt="Voiture" width="1200" height="500">
+        <img src="images/Concession.jpg" class ="img-responsive" alt="Voiture" width="1200" height="500">
         <div class="carousel-caption">
           <h3>Venez nous rencontrer</h3>
           <p>DMR Formation</p>
@@ -190,6 +190,25 @@
     </div>
   </div>
 </div>
+
+<!-----------------------------------------------------  Modal Pour le message acheter ------------------------------------------------------>
+
+<div class="modal fade" id="Acheter" role="dialog">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title" style="text-align: center"><span class="glyphicon glyphicon-warning-sign"></span> Attention</h4>
+        </div>
+        <div class="modal-body">
+          <p style="text-align: center">Site en maintenance, achat non disponible pour le moment</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
 </body>
 
