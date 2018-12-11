@@ -16,34 +16,18 @@
 				name="nom" />
 		</div>
 		<div class="form-group">
-			<label name="marque">Marque</label> <select class="form-control"
-				name="marque">
+			<label name="nomMarque">Marque</label> <select class="form-control"
+				name="nomMarque">
 				<c:forEach items="${Marque}" var="marque">
 					<option>${marque}</option>
 				</c:forEach>
 			</select>
 		</div>
-		<div class="form-group">
-			<label name="couleur">Couleur</label> <select class="form-control"
-				name="couleur">
-				<c:forEach items="${Couleur}" var="couleur">
-					<option>${couleur}</option>
-				</c:forEach>
-			</select>
-		</div>
+		
 
 		<div class="form-group">
-			<label name="moteur">Choix du moteur</label> <select
-				class="form-control" name="moteur">
-				<c:forEach items="${TypeMoteur}" var="moteur">
-					<option>${moteur}</option>
-				</c:forEach>
-			</select>
-		</div>
-
-		<div class="form-group">
-			<label name="prixTotal">Prix</label> <input class="form-control"
-				type="text" name="prixTotal" />
+			<label name="prixDeBase">Prix</label> <input class="form-control"
+				type="text" name="prixDeBase" />
 		</div>
 
 

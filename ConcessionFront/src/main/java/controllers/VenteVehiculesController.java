@@ -39,6 +39,7 @@ private static final Logger logger = LoggerFactory.getLogger(VenteVehiculesContr
 		model.addAttribute("newUser", new Utilisateur());
 		model.addAttribute("TypeMoteur", TypeMoteur.values());
 		model.addAttribute("Marque", Marque.values());
+		model.addAttribute("Couleur", Couleur.values());
 		return "venteVehicules";
 	}
 	
@@ -53,6 +54,7 @@ private static final Logger logger = LoggerFactory.getLogger(VenteVehiculesContr
 			@RequestParam("couleur") Couleur couleur,
 			@RequestParam("moteur") TypeMoteur moteur,
 			@RequestParam("marque") Marque nomMarque,
+			@RequestParam("kilometre") int kilometre,
 			@RequestParam("file") MultipartFile file) {
 
 		if (!file.isEmpty()) {
@@ -85,6 +87,7 @@ private static final Logger logger = LoggerFactory.getLogger(VenteVehiculesContr
 				v.setPrixTotal(prixTotal);
 				v.setAnnée(année);
 				v.setNomMarque(nomMarque);
+				v.setKilometre(kilometre);
 				
 				vehiculeRepository.save(v);
 				

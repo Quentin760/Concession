@@ -34,12 +34,12 @@
 <%-- 						onclick="window.location.href='${vehicules.image}'">Photo --%>
 <!-- 						Voiture</button> -->
 					      <img src="${vehicules.image}" class="img-thumbnail zoom" alt="Voiture" height="150" width="150">
-					<p class="nom">
-						<strong>${vehicules.nom}</strong>
+					<p class="nom">${vehicules.nomMarque}
+						<strong> ${vehicules.nom}</strong>
 					</p>
-					<p>${vehicules.nomMarque}</p>
+					
 					<p>${vehicules.année} | ${vehicules.moteur} | ${vehicules.couleur}</p>
-			
+					<h5>${vehicules.kilometre} Kilomètres</h5>
 					<h4 class="prix">${vehicules.prixTotal} €</h4>
 				<c:if test="${empty connecteduser}">
 					<p>Connectez-vous pour pouvoir acheter ce véhicule</p>

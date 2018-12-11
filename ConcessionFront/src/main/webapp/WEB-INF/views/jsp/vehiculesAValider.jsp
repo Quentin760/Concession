@@ -30,10 +30,10 @@
 				data-recherche="${vehicules.nom} ${vehicules.couleur} ${vehicules.moteur} ${vehicules.année}"
 				data-id="${vehicules.id}" style="padding-top: 10px">
 				<div class="thumbnail">
-					<button type="submit"
-						onclick="window.location.href='${vehicules.image}'">Photo
-						Voiture</button>
-					<%--       <img src="${vehicules.image}" alt="Voiture" style="with:100%"> --%>
+<!-- 					<button type="submit" -->
+<%-- 						onclick="window.location.href='${vehicules.image}'">Photo --%>
+<!-- 						Voiture</button> -->
+					 <img src="${vehicules.image}" class="img-thumbnail zoom" alt="Voiture" height="150" width="150">
 					<p class="nom">
 						<strong>${vehicules.nom}</strong>
 					</p>

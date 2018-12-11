@@ -45,6 +45,9 @@ public class Vehicule {
 	
 	@Column
 	protected boolean valider;
+	
+	@Column
+	protected Integer kilometre;
 
 	@Enumerated(EnumType.STRING)
 	@Column
@@ -73,6 +76,15 @@ public class Vehicule {
 
 	public void setId(int id) {
 		this.id = id;
+	}
+
+	
+	public int getKilometre() {
+		return kilometre;
+	}
+
+	public void setKilometre(Integer kilometre) {
+		this.kilometre = kilometre;
 	}
 
 	public Marque getNomMarque() {

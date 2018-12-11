@@ -9,7 +9,7 @@
 	<form:form method="POST" action="venteVehicules" enctype="multipart/form-data" modelAttribute="vehicule">
 	
 		<label name="marque">Choix de la marque</label>
-          <select class="form-control" name="marque">
+          <select class="form-control selectpicker" name="marque" data-live-search="true" data-title="Choisissez votre marque">
           	<c:forEach items="${Marque}" var="marque">
                          <option>${marque}</option>
             </c:forEach>
@@ -19,10 +19,13 @@
                  <label name="nom">Nom</label>
                  <input class="form-control" type="text" name="nom"/>
           </div>
-          <div class="form-group">
-                 <label name="couleur">Couleur</label>
-                  <input class="form-control" type="text" name="couleur"/>
-          </div>
+         <label name="couleur">Choix de la couleur</label>
+          <select class="form-control selectpicker" name="couleur" data-live-search="true" data-title="Choisissez votre couleur">
+           <option value="" disabled selected>Choix Couleur</option>
+          	<c:forEach items="${Couleur}" var="couleur">
+                         <option>${couleur}</option>
+            </c:forEach>
+         </select>
           <div class="form-group">
                  <label name="année">Année</label>
                  <input class="form-control" type="number" min="1990" max="2019" name="annee"/>
@@ -31,9 +34,14 @@
                  <label name="prixTotal">Prix</label>
                  <input class="form-control" type="number" min="0" name="prixTotal"/>
           </div>
+          <div class="form-group">
+                 <label name="kilometre">Kilomètre</label>
+                 <input class="form-control" type="number" min="0" name="kilometre"/>
+          </div>
           
           <label name="moteur">Choix du moteur</label>
-          <select class="form-control" name="moteur">
+          <select class="form-control" name="moteur" >
+           <option value="" disabled selected>Choix Moteur</option>
           	<c:forEach items="${TypeMoteur}" var="moteur">
                          <option>${moteur}</option>
             </c:forEach>

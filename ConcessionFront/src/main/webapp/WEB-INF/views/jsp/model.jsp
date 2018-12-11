@@ -30,12 +30,14 @@
       
        <label name="moteur">Type de moteur</label> 
       		<select class="form-control" name="couleur">
+      		<option value="" disabled selected>Choix Moteur</option>
 				<c:forEach items="${TypeMoteur}" var="moteur">
 					<option>${moteur}</option>
 				</c:forEach>
 			</select>
       <label name="couleur">Couleur</label> 
       		<select class="form-control" name="couleur">
+      		 <option value="" disabled selected>Choix Couleur</option>
 				<c:forEach items="${Couleur}" var="couleur">
 					<option>${couleur}</option>
 				</c:forEach>
@@ -44,7 +46,7 @@
       		<select class="form-control selectpicker" multiple data-live-search="true" data-style="btn-default" data-title="Choisissez vos options" data-width="100%" name="options">
 
 				<c:forEach items="${Options}" var="options">
-					<option>${options}</option>
+					<option value="${options}">${options.option}</option>
 				</c:forEach>
 			</select>
 			
