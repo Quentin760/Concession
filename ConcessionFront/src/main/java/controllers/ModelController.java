@@ -36,7 +36,7 @@ public class ModelController {
 	}
 	
 	@GetMapping("/models/supprimer")
-	public String supprimerVehiculeGet(@RequestParam("id") int id, Model model) {
+	public String supprimerModelGet(@RequestParam("id") int id, Model model) {
 		model.addAttribute("user", new Utilisateur());
 		model.addAttribute("newUser", new Utilisateur());
 		modelRepository.deleteById(id);

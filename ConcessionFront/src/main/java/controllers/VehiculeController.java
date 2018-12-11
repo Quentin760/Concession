@@ -4,6 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.io.DataInputStream;
 import java.io.File;
@@ -50,6 +51,14 @@ public class VehiculeController {
         }
 
     }
+	
+	@GetMapping("/vehicules/supprimer")
+	public String supprimerVehiculeGet(@RequestParam("id") int id, Model model) {
+		model.addAttribute("user", new Utilisateur());
+		model.addAttribute("newUser", new Utilisateur());
+		vehiculeRepository.deleteById(id);
+		return "redirect:/vehicules";
+	}
 	
 	
 }

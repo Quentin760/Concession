@@ -8,6 +8,12 @@
 	<div class="container" style="width: 50%">
 	<form:form method="POST" action="venteVehicules" enctype="multipart/form-data" modelAttribute="vehicule">
 	
+		<label name="marque">Choix de la marque</label>
+          <select class="form-control" name="marque">
+          	<c:forEach items="${Marque}" var="marque">
+                         <option>${marque}</option>
+            </c:forEach>
+         </select>
                                 
           <div class="form-group">
                  <label name="nom">Nom</label>
@@ -35,7 +41,7 @@
 		<div class="form-group">
     		<label for="exampleFormControlFile1">Photo à joindre</label>
     		<input type="file" class="form-control-file" name="file" id="exampleFormControlFile1">
-    		<input type="text" name="name"><span>Nom du Fichier (.pdf)</span>
+    		<input type="text" name="name"><span>Nom du Fichier</span>
   		</div>
   		
   		 <input type="submit" value="Valider" name="submit" class="btn btn-success">

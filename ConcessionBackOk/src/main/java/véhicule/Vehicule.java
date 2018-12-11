@@ -36,6 +36,10 @@ public class Vehicule {
 	@Column
 	protected int année;
 	
+	@Enumerated(EnumType.STRING)
+	@Column
+	protected Marque nomMarque;
+	
 	@Column
 	protected String image;
 	
@@ -56,7 +60,7 @@ public class Vehicule {
 	protected Couleur couleur;
 
 	// Constructeur par
-	// d�faut*********************************************************
+	// défaut*********************************************************
 	public Vehicule() {
 
 	}
@@ -71,7 +75,13 @@ public class Vehicule {
 		this.id = id;
 	}
 
-	
+	public Marque getNomMarque() {
+		return nomMarque;
+	}
+
+	public void setNomMarque(Marque nomMarque) {
+		this.nomMarque = nomMarque;
+	}
 
 	public boolean isValider() {
 		return valider;

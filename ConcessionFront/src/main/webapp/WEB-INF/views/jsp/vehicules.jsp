@@ -27,16 +27,17 @@
 
 		<c:forEach items="${vehicules}" var="vehicules">
 			<div class="element col-sm-4" id="${vehicules.id}"
-				data-recherche="${vehicules.nom} ${vehicules.couleur} ${vehicules.moteur} ${vehicules.année}"
+				data-recherche="${vehicules.nom} ${vehicules.couleur} ${vehicules.moteur} ${vehicules.année} ${vehicules.nomMarque}"
 				data-id="${vehicules.id}" style="padding-top: 10px">
 				<div class="thumbnail">
-					<button type="submit"
-						onclick="window.location.href='${vehicules.image}'">Photo
-						Voiture</button>
-					<%--       <img src="${vehicules.image}" alt="Voiture" style="with:100%"> --%>
+<!-- 					<button type="submit" -->
+<%-- 						onclick="window.location.href='${vehicules.image}'">Photo --%>
+<!-- 						Voiture</button> -->
+					      <img src="${vehicules.image}" class="img-thumbnail zoom" alt="Voiture" height="150" width="150">
 					<p class="nom">
 						<strong>${vehicules.nom}</strong>
 					</p>
+					<p>${vehicules.nomMarque}</p>
 					<p>${vehicules.année} | ${vehicules.moteur} | ${vehicules.couleur}</p>
 			
 					<h4 class="prix">${vehicules.prixTotal} €</h4>
@@ -45,6 +46,9 @@
 				</c:if>
 				<c:if test="${connecteduser.role == 'Client'}">
 					<button class="btn btn-primary" data-toggle="modal" data-target="#Acheter">Acheter</button>
+				</c:if>
+				<c:if test="${connecteduser.role == 'Concessionnaire'}">
+					<button class="btn btn-danger" data-id="${vehicules.id}" onclick="clickBoutonSupprimerVehicule(this)">Supprimer</button>
 				</c:if>
 				</div>
 			</div>

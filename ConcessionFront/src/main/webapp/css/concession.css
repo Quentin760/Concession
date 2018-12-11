@@ -17,6 +17,7 @@ body {
     color: black;
 }
 
+ 
 /* Style pour le caroussel -----------------------------------------------------------------------*/
 .carousel-inner img {
     -webkit-filter: grayscale(90%);
@@ -105,6 +106,9 @@ body {
  	border-color: #474747;
  	border-radius: 5px;
  }
- 
+
+ .zoom:hover {
+  transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
  /****** Style container ********************************************************************/
  

@@ -18,6 +18,7 @@ import org.springframework.web.multipart.MultipartFile;
 import personne.Utilisateur;
 import repositories.VehiculeRepository;
 import véhicule.Couleur;
+import véhicule.Marque;
 import véhicule.TypeMoteur;
 import véhicule.Vehicule;
 
@@ -37,13 +38,13 @@ private static final Logger logger = LoggerFactory.getLogger(VenteVehiculesContr
 		model.addAttribute("user", new Utilisateur());
 		model.addAttribute("newUser", new Utilisateur());
 		model.addAttribute("TypeMoteur", TypeMoteur.values());
+		model.addAttribute("Marque", Marque.values());
 		return "venteVehicules";
 	}
 	
 	
-	/**
-	 * Upload single file using Spring Controller
-	 */
+//	Upload pdf pour le formulaire de mise en vente voiture d'occasion*******************************
+	
 	@PostMapping("/venteVehicules")
 	public String uploadFileHandler(@RequestParam("name") String name, 
 			@RequestParam("prixTotal") int prixTotal, 
@@ -51,6 +52,7 @@ private static final Logger logger = LoggerFactory.getLogger(VenteVehiculesContr
 			@RequestParam("annee") int année, 
 			@RequestParam("couleur") Couleur couleur,
 			@RequestParam("moteur") TypeMoteur moteur,
+			@RequestParam("marque") Marque nomMarque,
 			@RequestParam("file") MultipartFile file) {
 
 		if (!file.isEmpty()) {
@@ -82,6 +84,7 @@ private static final Logger logger = LoggerFactory.getLogger(VenteVehiculesContr
 				v.setNom(nom);
 				v.setPrixTotal(prixTotal);
 				v.setAnnée(année);
+				v.setNomMarque(nomMarque);
 				
 				vehiculeRepository.save(v);
 				
@@ -95,4 +98,6 @@ private static final Logger logger = LoggerFactory.getLogger(VenteVehiculesContr
 					+ " because the file was empty.";
 		}
 	}
+	
+	
 }

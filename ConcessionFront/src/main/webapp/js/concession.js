@@ -6,7 +6,7 @@
 
 $(document).ready(function() {
 	
-$('.selectpicker').selectpicker( {placeholder: "Here is the placeholder"});
+$('.selectpicker').selectpicker( );
 
 /* Login AJAX **************************************************************************/
 $("#login-button").click(function() {
@@ -117,7 +117,6 @@ function clickBoutonValider(bv) {
 /* listener Sur boutton supprimer**********************************************************************/
 function clickBoutonSupprimer(bs) {
 	
-
 	var id = $(bs).data("id");
 	$.ajax({
 		"url": "vehiculesAValider/supprimer", 
@@ -136,10 +135,27 @@ function clickBoutonSupprimer(bs) {
 
 function clickBoutonSupprimerModel(bs) {
 	
-	
 	var id = $(bs).data("id");
 	$.ajax({
 		"url": "models/supprimer", 
+		"data": {
+				"id": id,
+			},
+		"method": "GET",
+		"error": function(xhr, status, error) {	
+			},
+		"success": function(data, status, xhr) {
+
+				$(".element[data-id="+id+"]").remove();
+			}
+		});
+}
+
+function clickBoutonSupprimerVehicule(bsv) {
+	console.log("test suppression vehicule")
+	var id = $(bsv).data("id");
+	$.ajax({
+		"url": "vehicules/supprimer", 
 		"data": {
 				"id": id,
 			},
